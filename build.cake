@@ -8,7 +8,7 @@ Task("Default")
 Task("Clean")
 	.Does(() =>
 {
-	MSBuild("./TeamCityTest/TeamCityTest.csproj", new MSBuildSettings()
+	MSBuild("./DevopsNagpQ3/DevopsNagpQ3.csproj", new MSBuildSettings()
 		  .WithTarget("Clean"));
 });
 
@@ -16,21 +16,21 @@ Task("Restore")
   .IsDependentOn("Clean")
   .Does(() =>
   {
-    NuGetRestore("TeamCityTest.sln");
+    NuGetRestore("DevopsNagpQ3.sln");
   });
 
 Task("Build")
 	.IsDependentOn("Restore")
   .Does(() =>
 {
-  MSBuild("TeamCityTest.sln");
+  MSBuild("DevopsNagpQ3.sln");
 });
 
 Task("Generate-Artifacts")
 	.IsDependentOn("Coverage-Report")
 	.Does(() =>
 	{
-		MSBuild("./TeamCityTest/TeamCityTest.csproj", new MSBuildSettings()
+		MSBuild("./DevopsNagpQ3/DevopsNagpQ3.csproj", new MSBuildSettings()
 		  .WithProperty("DeployOnBuild", "true")
 		  .WithProperty("WebPublishMethod", "Package")
 		  .WithProperty("PackageAsSingleFile", "true")
@@ -53,6 +53,6 @@ Task("Coverage-Report")
 			  },
 			  new FilePath("./coverage.xml"),
 			  new OpenCoverSettings()
-				.WithFilter("+[TeamCityTest]*"));
+				.WithFilter("+[DevopsNagpQ3]*"));
 		});
 RunTarget(target);
