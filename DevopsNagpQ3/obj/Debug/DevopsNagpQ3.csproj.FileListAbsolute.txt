@@ -135,3 +135,4 @@ D:\NAGP\DevOps\NAGPQ3\DevopsNagpQ3\bin\Microsoft.Owin.Security.Twitter.xml
 D:\NAGP\DevOps\NAGPQ3\DevopsNagpQ3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\NAGP\DevOps\NAGPQ3\DevopsNagpQ3\obj\Debug\DevopsNagpQ3.dll
 D:\NAGP\DevOps\NAGPQ3\DevopsNagpQ3\obj\Debug\DevopsNagpQ3.pdb
+D:\NAGP\DevOps\NAGPQ3\DevopsNagpQ3\obj\Debug\DevopsNagpQ3.csprojResolveAssemblyReference.cache
